@@ -81,6 +81,15 @@ text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
 	height:100%; */
 	border: 1px solid black;
 }
+.logo > img{
+margin-bottom:0px;
+margin-top:0px;
+width:160px;
+}
+.welcomeUsername{
+font-weight:bold;
+font-size:18px;
+}
 /* .alinearIzquierda{
 float:left;
 } */
@@ -378,7 +387,7 @@ font-size:28px;
 clear:both;
 }
 /*--Acceder--*/
-#cForm-Acceder{
+.cForm-Acceder{
 	width:500px;
 	padding:25px 40px;
 	margin: 25px auto;
@@ -388,6 +397,32 @@ clear:both;
 	background-color: #ddd;
 	color: #000;
 	opacity:0.9;
+}
+#form-login-registro{
+margin-top: 30px; 
+}
+#cForm-acceder-center{
+
+width:300px;
+margin-left:30%;
+}
+.errorFailedLoginMsg{
+margin-top:20px;
+width:200px;
+text-align:center;
+}
+.form-error-msg{
+color:red;
+margin-left:10px;
+}
+.title-form{
+font-family:Arial,Verdana;
+font-size:25px;
+}
+
+#checkbox-registro{
+float: left;
+margin-right: 10px;
 }
 .alinearIzquierda{
 float:left;

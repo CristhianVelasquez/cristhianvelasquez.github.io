@@ -1,14 +1,30 @@
-<div id="cForm-Acceder">
-	<form id="form-acceder-registro" action="procesos/registrarEmpresa.php" method="post">
-		<div id="cForm-Inicio">
-			<h1 class="title-pags">&iexcl;Bienvenidos!</h1>
+﻿<div class="cForm-Acceder">
+	<div id="cForm-acceder-center">
+	<h1 class="title-form">&iexcl;Bienvenidos!</h1>
+	<form  id="form-login-registro" action="procesos/autenticar.php" method="post">
 			
-			
-				<p class="preguntaLogin">&iquest;Cu&aacute;l es su R.U.C.?</p>
-				<div class="label-input">	
-					<label class="etiqueta">Mi R.U.C. es</label>
-					<input type="text" name="ruc"/>
-				</div>
+		<div>	
+			<label>R.U.C </label>
+			<input class="pull-left" type="text" name="ruc"/><?php ?><div class="form-error-msg pull-left">(*)</div><?php ?>
+			<div class="clear"></div>
+			<label>Contraseña </label> 
+			<input class="pull-left" type="password" name="claveAcceso" /><div class="form-error-msg pull-left">(*)</div>
+			<div class="clear"></div>
+		</div>
+		
+		<p>Si no tienes cuenta <a href="index.php?pag=registrate">Regístrate</a></p>
+		
+		<input type="submit" value="Ingresar" />
+		<?php if(isset($_SESSION["autenticado"])){ 
+			if($_SESSION["autenticado"]==false){	?>
+		<p class="form-error-msg errorFailedLoginMsg">El usuario y/o la contrase&ntilde;a no es(son) v&aacute;lido(s).</p>
+		<?php } 
+		}?>
+	</form>
+	</div>
+</div>
+				
+<!--
 				<div class="clear"></div>
 				<p class="preguntaLogin">&iquest;Tiene clave de acceso para "La tiendita de la Esquina"?</p>
 				<div class="label-input">
@@ -31,7 +47,7 @@
 					<input id="cForm-regist-next-welcome" class="btn-info" type="button" div-target="#cForm-registro1" value="Continuar"/>
 				</div>
 		</div>
-		<div id="cForm-registro1">
+<div id="registrate">
 			<h1 class="title-pags">Bienvenido al registro de usuario</h1>
 			<p>Por favor ingrese los datos indicados a continuación.</p>
 
@@ -64,6 +80,7 @@
 				<input id="cForm-regist-next-usuario" class="btn-info" type="button" div-target="#cForm-registro2" value="Siguiente"/>
 			</div>
 		</div>
+		
 		<div id="cForm-registro2">
 			<h1 class="title-pags">Antes de empezar a comprar</h1>
 				<div class="cForm-registro-textBoxCenter">
@@ -86,5 +103,4 @@
 					<input id="cForm-regist-next-contacto" class="btn-info" type="submit" div-target="#cForm-Inicio" value="Listo"/>
 				</div>
 		</div>
-	</form>
-</div>
+-->
